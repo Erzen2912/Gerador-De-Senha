@@ -5,9 +5,8 @@ let sizePassword = document.querySelector('#valor');
 let password = document.querySelector('#password');
 
 let containerPassword = document.querySelector('#container-password');
-console.log(containerPassword)
 
-const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@';
 let novaSenha = '';
 
 sizePassword.innerHTML = slider.value;
@@ -24,14 +23,21 @@ function generatePassword(){
   for(let i = 0,n = charset.length; i < slider.value; i++) {
     pass += charset.charAt(Math.floor(Math.random() * n)); 
   }
-
   containerPassword.classList.remove('hide')
   password.innerHTML = pass;
   novaSenha = pass;
-
+  console.log(novaSenha)
 }
 
 function copyPassword(){
-  alert('Copiada com sucesso')
-  navigator.clipboard.writeText(novaSenha)
+  navigator.clipboard
+  .writeText(novaSenha)
+  .then(() => {
+    alert("Senha Copiada com Sucesso!");
+  })
+  .catch(() => {
+    alert("Ops! Algo deu Errado.");
+  });  
+  console.log(novaSenha)
 }
+
