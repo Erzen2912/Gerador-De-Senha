@@ -1,7 +1,7 @@
 <img align="center"> ![image](https://user-images.githubusercontent.com/59092579/178814554-d4753f93-8bf5-4b5f-9129-b4620b1d43cc.png)
 </img>
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=Em%20Desenvolvimento&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=Em%20Desenvolvimento&color=RED&style=for-the-badge)
 
 ## :hammer: A litte description :)
 
